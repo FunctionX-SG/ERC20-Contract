@@ -24,7 +24,7 @@ We recommend using Solidity compiler version `0.8.18` as defined in the `hardhat
 > * Token symbol
 > * In this example, we have given the other 3 contract roles (pauser, minter and upgrader with a 0x0 address), since the defaultAdmin can perform all functions. Feel free to change this structure. 
 6. Run `npx hardhat compile` to compile the contract files.
-7. Run `npx hardhat run scripts/deploy.js --network fxMainnet` to deploy the contract on FunctionX mainnet. To deploy on FunctionX testnet, change the network to `fxTestnet` in the command.
+7. Run `npx hardhat run scripts/deploy.js --network fxMainnet` to deploy the contract on FunctionX mainnet. To deploy on FunctionX testnet, change the network to `fxTestnet` in the command. Please ensure that your deployer wallet has sufficient FX to deploy the contract.
 8. The terminal should print the contract address. Copy the contract address to view your deployed contract on Function X blockchain explorer. Here are the explorer links https://starscan.io/ (Mainnet) https://testnet.starscan.io/ (Testnet)
 
 ### After deploying the contract to Function X mainnet or testnet: 
@@ -38,7 +38,7 @@ We recommend using Solidity compiler version `0.8.18` as defined in the `hardhat
 >> ![verify](https://github.com/FunctionX-SG/ERC20-Contract/assets/143979872/baca0907-4e0a-470c-b041-2eba8f8783f5)
 > 4. Select _"Verify via Standard Input JSON"_
 >> ![json](https://github.com/FunctionX-SG/ERC20-Contract/assets/143979872/2e7dcbf7-e080-4b26-8a3e-a08dcdd9bd3d)
-> 5. Give your implementation contract a name, and select the compiler `v0.8.18+commit.87f61d96`. Upload the input JSON created, then select _"Verify & publish"_.
+> 5. Give your implementation contract a name (this will be the contract name), and select the compiler `v0.8.18+commit.87f61d96`. Upload the input JSON created, then select _"Verify & publish"_.
 >> ![Submit 2](https://github.com/FunctionX-SG/ERC20-Contract/assets/143979872/5eb3442c-889c-4874-9ca4-723645b482f4)
 > 6. Your contract should be verified now.
 3. Go back to the proxy contract page. On the _"Read Proxy"_ page, you should see that the `totalSupply` of your token is 1, or 1000000000000000000 wei.
